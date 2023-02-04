@@ -69,3 +69,39 @@ git checkout --orphan main
 # commit the initial files
 ```
 
+Adding MUI
+
+```sh
+yarn add @mui/material @emotion/react @emotion/styled
+yarn add @fontsource/roboto
+yarn add @mui/icons-material
+```
+
+Then, you can import it in your entry-point. See [reference](https://mui.com/material-ui/react-typography/#roboto-font-cdn)
+
+Add the following to `_app.tsx`
+
+```ts
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+```
+
+Additional references:
+
+[material-ui/examples/nextjs-with-typescript at master · mui/material-ui](https://github.com/mui/material-ui/tree/master/examples/nextjs-with-typescript)
+
+[mui/material-ui-docs](https://github.com/mui/material-ui-docs)
+
+See docs folder for NextJs integration.
+
+The MUI docs site uses NextJs with a custom theme.
+
+### Errors
+
+[Cannot find module 'next' or its corresponding type declarations](https://stackoverflow.com/questions/69238794/cannot-find-module-next-or-its-corresponding-type-declarations)
+
+```sh
+yarn dlx @yarnpkg/sdks vscode
+```
